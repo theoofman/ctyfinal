@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+        <script>
+            var map;
+            function displayMap()
+            {
+                var location = new google.maps.LatLng(38.89785052743242, -77.0365348440619);
+                
+                var options = {zoom: 11, center:location,mapTypeid: google.maps.MapTypeId.ROADMAP};
+                var map = new google.maps.Map(document.getElementById("map_canvas"), options);
+                
+                var storeLocation = new google.maps.LatLng(38.89785052743242, -77.0365348440619)
+                var storeMarker = new google.maps.Marker({position: storeLocation, map: map, title: "Our only store"});
+                var infoWindow = new google.maps.InfoWindow({content : "<p>Really the only walk-in store that we have</p>"});
+                google.maps.event.addListener( storeMarker, "click", function(){infoWindow.open( map, storeMarker);});
+            }
+            function showPosition()
+            {
+                if(navigator.geolocation)
+                    navigator.geolocation.getCurrentPosition(displayPosition, displayError);
+                else
+                    alert("Geolocation is not supported");
+            }
+        </script>
+    </head>
+    <body onload="displayMap()"><div id="map_canvas" style="width: 640px; height:480px;"></div></body>
+</html>

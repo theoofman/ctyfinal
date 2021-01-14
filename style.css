@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+body{
+    background-image:url("Assets/smart.jpg");
+    background-repeat:repeat;
+}
+#navbar{
+    background-color:lightblue;
+    border-bottom:1px solid black;
+    border-top: 1px solid black;
+    width:100%;
+}
+#header{
+    text-align: center;
+}
+#header > *{
+    margin-bottom: 0px;
+    font-family: "Bodoni Moda";
+}
+#boom{
+    font-size:20px;
+}
+#sidebar{
+    width:160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: black;
+    overflow-x: hidden;
+    margin-top:20px;
+}
+#footer{
+    position:fixed;
+    z-index: 1;
+    bottom:0;
+}
+#navbar a{
+    text-decoration: none;
+    margin-left:20px;
+    color:black;
+}
+#navbar img{
+    float:left;
+}
+.italic{
+    font-style:italic;
+}
+.faq{
+    text-align: center;
+    border:2px solid black;
+    background-color:lightcyan;
+}
+form{
+    text-align: center;
+    margin-top:100px;
+}
